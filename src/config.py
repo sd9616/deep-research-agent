@@ -28,7 +28,9 @@ class Config:
     LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai") 
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4-turbo-preview")
-    LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0.7"))
+    
+    # Summarization Model (smaller/cheaper model for summarization tasks)
+    SUMMARY_MODEL = os.getenv("SUMMARY_MODEL", "gpt-3.5-turbo") 
     
     # Search API Settings
     SEARCH_PROVIDER = os.getenv("SEARCH_PROVIDER", "tavily")
@@ -37,8 +39,13 @@ class Config:
     MAX_SEARCH_RESULTS = int(os.getenv("MAX_SEARCH_RESULTS", "5"))
     
     # Agent Settings
-    MAX_ITERATIONS = int(os.getenv("MAX_ITERATIONS", "3"))
+    MAX_ITERATIONS = int(os.getenv("MAX_ITERATIONS", "5"))
     MIN_SOURCES = int(os.getenv("MIN_SOURCES", "5"))
+    
+    # LangSmith Tracing (for viewing prompts and traces)
+    LANGCHAIN_TRACING_V2 = os.getenv("LANGCHAIN_TRACING_V2", "false")
+    LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_API_KEY")
+    LANGCHAIN_PROJECT = os.getenv("LANGCHAIN_PROJECT", "deep-research-agent")
     
 @dataclass(kw_only=True)
 class Configuration:
@@ -59,7 +66,6 @@ class Configuration:
     # LLM Configuration
     llm_provider: str = field(default_factory=lambda: Config.LLM_PROVIDER)
     llm_model: str = field(default_factory=lambda: Config.LLM_MODEL)
-    llm_temperature: float = field(default_factory=lambda: Config.LLM_TEMPERATURE)
     
     # Search Configuration
     search_provider: str = field(default_factory=lambda: Config.SEARCH_PROVIDER)

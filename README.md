@@ -60,7 +60,10 @@ deep-research-agent/
 
 3. **Configure API keys**
    ```bash
+   # cd into folder 
+   cd deep-research-agent
    cp .env.example .env
+   nano .env
    # Edit .env and add your API keys: 
    # You can also search for "TODO:" to find the following lines
    # OPENAI_API_KEY=
@@ -68,12 +71,7 @@ deep-research-agent/
    # LANGCHAIN_API_KEY=
    ```
 
-4. **Verify setup**
-   ```bash
-   python test_setup.py
-   ```
-
-5. **Run the agent** 
+4. **Run the agent** 
 
    * **LangGraph Studio**
      ```bash 

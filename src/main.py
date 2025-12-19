@@ -1,4 +1,5 @@
 """Command-line interface for the Deep Research Agent.
+
 Usage:
     python -m src.main "What are the latest developments in quantum computing?"
     python -m src.main "Climate change impacts" --output report.md
