@@ -77,23 +77,23 @@ deep-research-agent/
      ```bash 
      langgraph dev 
      ```
-
+<!-- 
    * **CLI**
       Run the agent with a research query:
 
       ```bash
-      python -m src.main "What are the latest developments in multi-agent systems?"
+      python -m src.main "Investigate the relationship between weather and exercise."
       ```
 
       Enable verbose mode to see intermediate steps:
 
       ```bash
-      python -m src.main "Future of AI in healthcare" --verbose
+      python -m src.main "Research " --verbose
       ```
 
       Save the report to a file:
       ```bash
-      python -m src.main "Climate change impact on ocean ecosystems" --output report.md
+      python -m src.main "Climate change impact on ocean ecosystems" --output report.md -->
       ```
 
 
