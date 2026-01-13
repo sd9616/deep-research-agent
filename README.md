@@ -76,7 +76,7 @@ deep-research-agent/
    * **LangGraph Studio**
      ```bash 
      langgraph dev 
-     ```
+
 
    * **CLI**
       Run the agent with a research query:
