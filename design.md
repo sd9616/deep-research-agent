@@ -6,7 +6,7 @@ I wanted to create a deep research agent that mirrors a general workflow when re
 
 ## Architectural Choices 
 
-Like I mentioned above, I wanted to create an architecture that mirrored the general human process while researcher. LangChain's open_deep_researcher and local_deep_researcher both do this and make use of cycles that involve web searches and summarizations overseen by a supervisor. 
+I wanted to create an architecture that mirrored the general human process while researching. LangChain's open_deep_researcher and local_deep_researcher both do this and make use of cycles that involve web searches and summarizations overseen by a supervisor. 
 
 Further, open_deep_researcher uses an agent to clarify the scope, occasionally asking the user to clarify their message to the agent. I chose to incorporate this idea since it allows the user to have a well defined scope before the agents commits to the process of researching on the user's behalf. 
 
